@@ -1,8 +1,10 @@
 <?php
+session_start();
 include ('konfigurasi/koneksi.php');
-if (isset($_SESSION['username_pengguna'])){
-    header("location: index.php");
-}
+
+if ($_SESSION['id']){
+    header("location:index.php");
+}else{
 ?>
 
 <!doctype html>
@@ -41,20 +43,20 @@ if (isset($_SESSION['username_pengguna'])){
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
-                        <img class="align-content" src="images/logo.png" alt="">
+                        <img class="align-content" src="gambar/logo.png" alt="">
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form method="POST" action="konfigurasi/cek_masuk.php">
                         <div class="form-group">
-                            <label>Email address</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <label>Username / Surel</label>
+                            <input name="username" type="text" class="form-control" placeholder="Username / Surel">
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <label>Kata sandi</label>
+                            <input name="katasandi" type="password" class="form-control" placeholder="Kata sandi">
                         </div>
-                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Masuk</button>
+                        <button name="masuk" type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Masuk</button>
                     </form>
                 </div>
             </div>
@@ -70,3 +72,4 @@ if (isset($_SESSION['username_pengguna'])){
 
 </body>
 </html>
+<?php } ?>
