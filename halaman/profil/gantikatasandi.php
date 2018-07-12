@@ -67,7 +67,7 @@
                 if($pass_baru == $konfirmpass){
             // Jika pass lama cocok sama yang di database.
                 if(password_verify($pass_lama, $row['pass_pengguna'])){
-                $update 		= $koneksi->query("UPDATE tb_pengguna SET pass_pengguna='$passfix' WHERE id_pengguna='$_SESSION[id]'");
+                $koneksi->query("UPDATE tb_pengguna SET pass_pengguna='$passfix' WHERE id_pengguna='$_SESSION[id]'");
                 echo "<script type='text/javascript'>alert('Berhasil ganti password!'); window.location.href='index.php';</script>";
             // Jika pass lama tidak cocok sama yang di database.
                 }else{
