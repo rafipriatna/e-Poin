@@ -10,6 +10,9 @@ if (!isset($_SESSION['id'])) {
         echo 'Kamu diem aja selama 30 Menit, silahkan <a href="masuk.php">masuk</a> lagi.';
         session_destroy();
     }else {
+// Tiap masuk ke halaman, akan selalu di refresh waktu nya.
+// Jik pengguna diem aja sampai waktu habis, maka akan di matikan session nya.
+$_SESSION['waktu'] = time();
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
