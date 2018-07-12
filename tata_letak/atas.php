@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="gambar/logo_rafipriatnablog.png">
 
     <link rel="stylesheet" href="web/css/normalize.css">
     <link rel="stylesheet" href="web/css/bootstrap.min.css">
@@ -47,7 +47,7 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li>
                         <a href="index.php"> <i class="menu-icon fa fa-dashboard"></i>Beranda </a>
                     </li>
                     <h3 class="menu-title">Admin</h3><!-- /.menu-title -->
@@ -85,7 +85,7 @@
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                                <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
+                                <a class="nav-link" href="?halaman=profil"><i class="fa fa- user"></i>Profil saya</a>
 
                                 <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
 

@@ -26,6 +26,11 @@ include ('tata_letak/atas.php');
                     include "halaman/beranda/beranda.php";
                 }
             }
+            if ($halaman == "profil"){
+                if ($aksi == ""){
+                    include "halaman/profil/profil.php";
+                }
+            }
             if ($halaman == "guru"){
                 if ($aksi == ""){
                     include "halaman/guru/guru.php";

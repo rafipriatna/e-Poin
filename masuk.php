@@ -50,7 +50,7 @@ if ($_SESSION['id']){
                     <form method="POST" action="konfigurasi/cek_masuk.php">
                         <div class="form-group">
                             <label>Username / Surel</label>
-                            <input name="username" type="text" class="form-control" placeholder="Username / Surel">
+                            <input name="username" type="text" class="form-control" placeholder="Username / Surel" autofocus>
                         </div>
                         <div class="form-group">
                             <label>Kata sandi</label>
