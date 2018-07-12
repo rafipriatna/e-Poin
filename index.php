@@ -30,6 +30,9 @@ include ('tata_letak/atas.php');
                 if ($aksi == ""){
                     include "halaman/profil/profil.php";
                 }
+                if ($aksi == "gantikatasandi"){
+                    include "halaman/profil/gantikatasandi.php";
+                }
             }
             if ($halaman == "guru"){
                 if ($aksi == ""){
