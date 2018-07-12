@@ -30,7 +30,7 @@
                                 </div>
                                 <hr>
                                 <div class="card-text text-sm-center">
-                                    <a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#gantifoto">Ganti foto profil</i></a>
+                                    <a class="btn btn-outline-primary btn-lg btn-block" href="#" data-toggle="modal" data-target="#gantifoto">Ganti foto profil</i></a>
                                 </div>
                             </div>
                         </div>
