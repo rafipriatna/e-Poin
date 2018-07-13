@@ -26,6 +26,9 @@
                                 <strong class="card-title">Data Guru</strong>
                             </div>
                         <div class="card-body">
+                        <div class="col-sm-3">
+                            <a href="?halaman=guru&aksi=tambah" class="btn btn-primary">Tambah</a>
+                        </div><br/><br/>
                   <table id="bootstrap-data-table" class="table table-striped table-bordered">
                     <thead>
                       <tr>

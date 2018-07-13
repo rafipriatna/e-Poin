@@ -1,8 +1,3 @@
-<?php
-    $id_pengguna    = (int) $_GET['id'];
-    $sql            = $koneksi->query("SELECT * FROM tb_pengguna WHERE id_pengguna = '$id_pengguna'");
-    $pengguna       = $sql->fetch_assoc();
-?>
             <div class="breadcrumbs">
             <div class="col-sm-4">
                 <div class="page-header float-left">
@@ -27,27 +22,39 @@
                             <div class="card-header">
                                 <strong class="card-title">Data guru</strong>
                             </div>
-                            <div class="card-body card-block">
+                            <div class="card-body card-block col-lg-6">
                                 <form method="POST" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <label class=" form-control-label">Nama</label>
-                                                <input name="nama" type="text" class="form-control" value="<?php echo $pengguna['nama_pengguna'];?>">
+                                                <input name="nama" type="text" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label class=" form-control-label">Username</label>
-                                                <input name="username" type="text" class="form-control" value="<?php echo $pengguna['username_pengguna'];?>">
+                                                <input name="username" type="text" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label class=" form-control-label">Surel</label>
-                                                <input name="surel" type="email" class="form-control" value="<?php echo $pengguna['surel_pengguna'];?>">
+                                                <input name="surel" type="email" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label class=" form-control-label">Foto profil</label>
-                                                <img src="gambar/profil/guru/<?php echo $pengguna['foto_pengguna'];?>" class="form-control col-sm-2"/>
+                                                <label class=" form-control-label">No telp</label>
+                                                <input name="notelp" type="number" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label class=" form-control-label">Ganti foto</label>
-                                                <input name="gantifoto" type="file" class="form-control col-sm-3">
+                                                <label class=" form-control-label">Level</label>
+                                                    <select name="level" class="form-control">
+                                                        <option value="">Pilih level</option>
+                                                        <option value="Admin">Admin</option>
+                                                        <option value="Guru">Guru</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" form-control-label">Kata sandi</label>
+                                                <input name="pass" type="password" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class=" form-control-label">Foto</label>
+                                                <input name="foto" type="file" class="form-control">
                                             </div>
                                         </div>
                                     <div class="card-footer">
@@ -59,15 +66,18 @@
                                 </form>
 <?php
 if(isset($_POST['simpan'])){
-    $nama       = $_POST['nama'];
-    $username   = $_POST['username'];
-    $surel      = $_POST['surel'];
-    $foto       = $_FILES['gantifoto']['name'];
-    $file       = $_FILES['gantifoto']['tmp_name'];
-    $size       = $_FILES['gantifoto']['size'];
-    $tipe       = $_FILES['gantifoto']['type'];
-    $folder     = "gambar/profil/guru/";
-    $saring     = array('gif','png' ,'jpg');
+    $nama           = $_POST['nama'];
+    $username       = $_POST['username'];
+    $surel          = $_POST['surel'];
+    $notelp         = $_POST['notelp'];
+    $level          = $_POST['level'];
+    $pass           = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+    $foto           = $_FILES['foto']['name'];
+    $file           = $_FILES['foto']['tmp_name'];
+    $size           = $_FILES['foto']['size'];
+    $tipe           = $_FILES['foto']['type'];
+    $folder         = "gambar/profil/guru/";
+    $saring         = array('gif','png' ,'jpg');
     if (strlen($foto)){
         // Cek format foto.
         $ext = pathinfo($foto, PATHINFO_EXTENSION);
@@ -80,11 +90,12 @@ if(isset($_POST['simpan'])){
                 // Jika Mencoba upload & jika berhasil di upload
                 if(move_uploaded_file($file, $folder.$img)){
                     // UPDATE tb_pengguna sesuai ID nya.
-                    $koneksi->query("UPDATE tb_pengguna SET nama_pengguna='$nama', username_pengguna='$username',
-                    surel_pengguna='$surel', foto_pengguna='$img' WHERE id_pengguna='$id_pengguna'");
+                    $koneksi->query("INSERT INTO tb_pengguna (username_pengguna, nama_pengguna, surel_pengguna,
+                    telp_pengguna, level_pengguna, pass_pengguna, foto_pengguna)
+                    VALUES('$username', '$nama', '$surel', '$notelp', '$level', '$pass', '$img')");
                     ?>
                     <script type="text/javascript">
-                    alert("Berhasil memperbarui data guru");
+                    alert("Berhasil menambahkan guru baru");
                     window.location.href = "?halaman=guru";
                     </script>
                     <?php
@@ -113,13 +124,10 @@ if(isset($_POST['simpan'])){
             <?php
         }
     }else{
-        // Jika tidak update Foto.
-        $koneksi->query("UPDATE tb_pengguna SET nama_pengguna='$nama', username_pengguna='$username',
-        surel_pengguna='$surel' WHERE id_pengguna='$id_pengguna'");
+        // Jika tidak ada foto.
         ?>
         <script type="text/javascript">
-        alert("Berhasil memperbarui data guru!");
-        window.location.href = "?halaman=guru";
+        alert("Fotonya mana ?!");
         </script>
         <?php
     }

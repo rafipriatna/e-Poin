@@ -41,6 +41,9 @@ include ('tata_letak/atas.php');
                 if ($aksi == "ubah"){
                     include "halaman/guru/ubah.php";
                 }
+                if ($aksi == "tambah"){
+                    include "halaman/guru/tambah.php";
+                }
             }
             ?>
 
