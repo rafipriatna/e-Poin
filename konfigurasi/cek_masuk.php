@@ -20,7 +20,7 @@
 				$_SESSION['level'] 		= $level_pelogin;
 				// Mengambil waktu last login.
 				$setting    			= new DateTime('NOW', new DateTimeZone('Asia/Jakarta'));
-				$waktu					= $setting->format('Y-m-d g:i:s');
+				$waktu					= $setting->format('Y-m-d H:i:s');
 				$_SESSION['masuk']		= $waktu;
 				// Diberi waktu 30 x 60 detik. ( 30 Menit ).
 				$_SESSION['habis'] 		= 30 * 60;
