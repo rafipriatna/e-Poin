@@ -76,6 +76,38 @@
 
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                    <div class="dropdown for-notification">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="modal" data-target="#rafiModal">
+                            <i class="fa fa-bell"></i>
+                            <span class="count bg-danger">1</span>
+                          </button>
+                          </div>
+                            <b>Terakhir masuk</b> <?php echo $data['terakhir_masuk'];?>
+                        </div>
+                    </div>
+
+                <!-- Rafi Priatna -->
+                <div class="modal fade" id="rafiModal" tabindex="-1" role="dialog" aria-labelledby="rafiModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="rafiModalLabel">e-Poin</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Aplikasi <b>e-Poin</b> dikembangkan dengan <i style="color:#FF80AB" class="fa fa-heart"></i> oleh
+                                    <a href="https://www.rafipriatna.web.id" target="_blank">Rafi Priatna</a>.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Oke</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-sm-5">
@@ -86,11 +118,6 @@
 
                         <div class="user-menu dropdown-menu">
                                 <a class="nav-link" href="?halaman=profil"><i class="fa fa- user"></i>Profil saya</a>
-
-                                <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
-
-                                <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
-
                                 <a class="nav-link" href="keluar.php"><i class="fa fa-power -off"></i>Keluar</a>
                         </div>
                     </div>
