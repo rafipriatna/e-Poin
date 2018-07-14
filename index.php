@@ -45,6 +45,20 @@ include ('tata_letak/atas.php');
                     include "halaman/guru/tambah.php";
                 }
             }
+            if ($halaman == "pelajar"){
+                if ($aksi == ""){
+                    include "halaman/pelajar/pelajar.php";
+                }
+                if ($aksi == "lihat"){
+                    include "halaman/pelajar/lihat.php";
+                }
+                if ($aksi == "ubah"){
+                    include "halaman/pelajar/ubah.php";
+                }
+                if ($aksi == "tambah"){
+                    include "halaman/pelajar/tambah.php";
+                }
+            }
             ?>
 
     </div><!-- /#right-panel -->

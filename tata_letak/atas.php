@@ -55,7 +55,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-o"></i>Pengguna</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-user"></i><a href="?halaman=guru">Guru</a></li>
-                            <li><i class="fa fa-users"></i><a href="ui-badges.html">Pelajar</a></li>
+                            <li><i class="fa fa-users"></i><a href="?halaman=pelajar">Pelajar</a></li>
                         </ul>
                     </li>
                 </ul>
