@@ -84,7 +84,7 @@
                                     $no   = 1;
                                     $x  = $koneksi->query("SELECT * FROM tb_datapelanggar, tb_pelanggaran
                                     WHERE tb_datapelanggar.id_pelajar = '$id_pelajar'
-                                    AND tb_datapelanggar.no_pelanggaran = tb_pelanggaran.id_pelanggaran");
+                                    AND tb_datapelanggar.id_pelanggaran = tb_pelanggaran.id_pelanggaran");
                                     while ($pelanggaran = $x->fetch_assoc()){
                                     ?>
                                 <tr>
