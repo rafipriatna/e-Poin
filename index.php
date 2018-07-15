@@ -70,6 +70,12 @@ include ('tata_letak/atas.php');
                     include "halaman/admin/pelanggaran/tambah.php";
                 }
             }
+            // Untuk halaman guru saja.
+            if ($halaman == "piket"){
+                if ($aksi == ""){
+                    include "halaman/admin/piket/piket.php";
+                }
+            }
             ?>
 
     </div><!-- /#right-panel -->
