@@ -44,7 +44,7 @@
                         <form method="POST">
                         <div class="form-group">
                             <label class=" form-control-label">Username</label>
-                            <input name="username" type="text" value="<?php echo $data['username_pengguna'];?>" class="form-control" readonly>
+                            <input type="text" value="<?php echo $data['username_pengguna'];?>" class="form-control" readonly>
                         </div>
                         <div class="form-group">
                             <label class=" form-control-label">Nama</label>
@@ -70,12 +70,11 @@
                 </div>
 <?php
     if(isset($_POST['simpan'])){
-        $username   = $_POST['username'];
         $nama       = $_POST['nama'];
         $surel      = $_POST['surel'];
         $notelp     = $_POST['notelp'];
     // Simpan ke database table tb_pengguna.
-    $simpan = $koneksi->query("UPDATE tb_pengguna SET username_pengguna = '$username', nama_pengguna = '$nama',
+    $simpan = $koneksi->query("UPDATE tb_pengguna SET nama_pengguna = '$nama',
     surel_pengguna = '$surel', telp_pengguna = '$notelp' WHERE id_pengguna = '$_SESSION[id]'");
     // Jika berhasil disimpan.
     if ($simpan){
