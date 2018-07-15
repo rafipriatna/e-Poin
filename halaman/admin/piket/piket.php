@@ -24,7 +24,7 @@
                      <div class="col-md-12">
                          <div class="card">
                              <div class="card-header">
-                                 <strong class="card-title">Scan kartu pelajar</strong>
+                                 <strong class="card-title">Pindai kartu pelajar</strong>
                              </div>
                             <div class="card-body">
                          Silakan pindai kartu pelajar atau ketik manual NIS.<br/><br/>
