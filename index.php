@@ -59,6 +59,17 @@ include ('tata_letak/atas.php');
                     include "halaman/admin/pelajar/tambah.php";
                 }
             }
+            if ($halaman == "pelanggaran"){
+                if ($aksi == ""){
+                    include "halaman/admin/pelanggaran/pelanggaran.php";
+                }
+                if ($aksi == "ubah"){
+                    include "halaman/admin/pelanggaran/ubah.php";
+                }
+                if ($aksi == "tambah"){
+                    include "halaman/admin/pelanggaran/tambah.php";
+                }
+            }
             ?>
 
     </div><!-- /#right-panel -->

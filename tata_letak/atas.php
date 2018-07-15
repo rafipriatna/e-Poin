@@ -58,6 +58,7 @@
                             <li><i class="fa fa-users"></i><a href="?halaman=pelajar">Pelajar</a></li>
                         </ul>
                     </li>
+                    <li><a href="?halaman=pelanggaran"> <i class="menu-icon fa fa-warning"></i> Pelanggaran</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

@@ -63,21 +63,46 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title">Data penghargaan</strong>
-                            </div>
-                            <div class="card-body card-block">
-                            Segera hadir!
-                            </div>
-                        </div>
                     </div>                  
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Data pelanggaran</strong>
+                            </div>
+                            <div class="card-body card-block">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Deskripsi</th>
+                                    <th>Poin</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $no   = 1;
+                                    $x  = $koneksi->query("SELECT * FROM tb_datapelanggar, tb_pelanggaran
+                                    WHERE tb_datapelanggar.id_pelajar = '$id_pelajar'
+                                    AND tb_datapelanggar.no_pelanggaran = tb_pelanggaran.id_pelanggaran");
+                                    while ($pelanggaran = $x->fetch_assoc()){
+                                    ?>
+                                <tr>
+                                    <td><?php echo $no++;?></td>
+                                    <td><?php echo $pelanggaran['nama_pelanggaran']?></td>
+                                    <td><?php echo $pelanggaran['deskripsi_pelanggaran']?></td>
+                                    <td><?php echo $pelanggaran['poin_pelanggaran']?></td>
+                                  </tr>
+                                    <?php } ?>
+                                </tbody>
+                              </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">Data penghargaan</strong>
                             </div>
                             <div class="card-body card-block">
                             Segera hadir!
