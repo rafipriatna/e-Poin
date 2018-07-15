@@ -18,7 +18,6 @@
         </div>
 
         <div class="content mt-3">
-         <div class="content mt-3">
              <div class="animated fadeIn">
                  <div class="row">
                      <div class="col-md-12">
@@ -39,7 +38,26 @@
                                 </button>
                             </div>
                         </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+<?php
+if(isset($_POST['simpan'])){
+    $pindai = $_POST['pindai'];
+
+    $cek    = $koneksi->query("SELECT * FROM tb_pelajar WHERE nis_pelajar = '$pindai'");
+    $hasil  = $cek->fetch_assoc();
+    $tujuan = $hasil['nis_pelajar'];
+
+    if($cek){
+        ?>
+        <script type="text/javascript">
+        window.location.href="?halaman=piket&aksi=pindai&nis=<?php echo $tujuan;?>";
+        </script>
+        <?php
+    }
+}
+?>

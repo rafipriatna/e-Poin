@@ -75,6 +75,9 @@ include ('tata_letak/atas.php');
                 if ($aksi == ""){
                     include "halaman/admin/piket/piket.php";
                 }
+                if ($aksi == "pindai"){
+                    include "halaman/admin/piket/pindai.php";
+                }
             }
             ?>
 
