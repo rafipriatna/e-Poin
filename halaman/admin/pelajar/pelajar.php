@@ -35,6 +35,7 @@
                         <th>Foto</th>
                         <th>NIS</th>
                         <th>Nama</th>
+                        <th>No telp</th>
                         <th>Surel</th>
                         <th>Aksi</th>
                       </tr>
@@ -49,6 +50,7 @@
                         width="50" height="50"></td>
                         <td><?php echo $pelajar['nis_pelajar']?></td>
                         <td><?php echo $pelajar['nama_pelajar']?></td>
+                        <td><?php echo $pelajar['telp_pelajar']?></td>
                         <td><?php echo $pelajar['surel_pelajar']?></td>
                         <td>
                             <a href="?halaman=pelajar&aksi=lihat&id=<?php echo $pelajar['id_pelajar']?>"
