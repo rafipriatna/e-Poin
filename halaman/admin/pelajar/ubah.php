@@ -50,7 +50,7 @@
                                                 <label class="form-control-label">Status</label>
                                                 <select name="status" class="form-control">
                                                     <option value="Aktif" <?php if($pelajar['status_pelajar']=='Aktif') { echo "selected"; } ?>>Aktif</option>
-                                                    <option value="Nonaktif" <?php if($pelajar['status_pelajar']) { echo "selected"; } ?>>Nonaktif</option>
+                                                    <option value="Nonaktif" <?php if($pelajar['status_pelajar']=='Nonaktif') { echo "selected"; } ?>>Nonaktif</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -100,7 +100,7 @@ if(isset($_POST['simpan'])){
                     ?>
                     <script type="text/javascript">
                     alert("Berhasil memperbarui data pelajar");
-                    window.location.href = "?halaman=pelajar";
+                    window.location.href = "?halaman=pelajar&aksi=lihat&id=<?php echo $id_pelajar;?>";
                     </script>
                     <?php
                 }else{
@@ -134,7 +134,7 @@ if(isset($_POST['simpan'])){
         ?>
         <script type="text/javascript">
         alert("Berhasil memperbarui data pelajar!");
-        window.location.href = "?halaman=pelajar";
+        window.location.href = "?halaman=pelajar&aksi=lihat&id=<?php echo $id_pelajar;?>";
         </script>
         <?php
     }
