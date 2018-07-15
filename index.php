@@ -36,27 +36,27 @@ include ('tata_letak/atas.php');
             }
             if ($halaman == "guru"){
                 if ($aksi == ""){
-                    include "halaman/guru/guru.php";
+                    include "halaman/admin/guru/guru.php";
                 }
                 if ($aksi == "ubah"){
-                    include "halaman/guru/ubah.php";
+                    include "halaman/admin/guru/ubah.php";
                 }
                 if ($aksi == "tambah"){
-                    include "halaman/guru/tambah.php";
+                    include "halaman/admin/guru/tambah.php";
                 }
             }
             if ($halaman == "pelajar"){
                 if ($aksi == ""){
-                    include "halaman/pelajar/pelajar.php";
+                    include "halaman/admin/pelajar/pelajar.php";
                 }
                 if ($aksi == "lihat"){
-                    include "halaman/pelajar/lihat.php";
+                    include "halaman/admin/pelajar/lihat.php";
                 }
                 if ($aksi == "ubah"){
-                    include "halaman/pelajar/ubah.php";
+                    include "halaman/admin/pelajar/ubah.php";
                 }
                 if ($aksi == "tambah"){
-                    include "halaman/pelajar/tambah.php";
+                    include "halaman/admin/pelajar/tambah.php";
                 }
             }
             ?>
