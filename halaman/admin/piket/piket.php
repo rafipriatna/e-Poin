@@ -18,7 +18,6 @@
         </div>
 
         <div class="content mt-3">
-             <div class="animated fadeIn">
                  <div class="row">
                      <div class="col-md-12">
                          <div class="card">
@@ -29,7 +28,7 @@
                          Silakan pindai kartu pelajar atau ketik manual NIS.<br/><br/>
                             <form method="POST" class="col-sm-3">
                                 <div class="form-griup">
-                                    <input name="pindai" type="number" class="form-control"/>
+                                    <input name="pindai" type="number" class="form-control" required autofocus/>
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -42,20 +41,26 @@
                     </div>
                 </div>
             </div>
-        </div>
         
 <?php
 if(isset($_POST['simpan'])){
-    $pindai = $_POST['pindai'];
+    $pindai  = $_POST['pindai'];
 
-    $cek    = $koneksi->query("SELECT * FROM tb_pelajar WHERE nis_pelajar = '$pindai'");
-    $hasil  = $cek->fetch_assoc();
-    $tujuan = $hasil['nis_pelajar'];
+    $sql     = $koneksi->query("SELECT * FROM tb_pelajar WHERE nis_pelajar = '$pindai'");
+    $hasil   = $sql->fetch_assoc();
+    $tujuan  = $hasil['nis_pelajar'];
+    $cek     = $sql->num_rows;
 
     if($cek){
         ?>
         <script type="text/javascript">
         window.location.href="?halaman=piket&aksi=pindai&nis=<?php echo $tujuan;?>";
+        </script>
+        <?php
+    }else{
+        ?>
+        <script type="text/javascript">
+        alert("Pelajar tidak ditemukan!");
         </script>
         <?php
     }

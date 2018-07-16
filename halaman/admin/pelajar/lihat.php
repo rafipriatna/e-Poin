@@ -82,14 +82,16 @@
                                     <th>Deskripsi</th>
                                     <th>Poin</th>
                                     <th>Tanggal</th>
+                                    <th>Petugas</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     $no   = 1;
-                                    $x  = $koneksi->query("SELECT * FROM tb_datapelanggar, tb_pelanggaran
+                                    $x  = $koneksi->query("SELECT * FROM tb_datapelanggar, tb_pelanggaran, tb_pengguna
                                     WHERE tb_datapelanggar.id_pelajar = '$id_pelajar'
-                                    AND tb_datapelanggar.id_pelanggaran = tb_pelanggaran.id_pelanggaran");
+                                    AND tb_datapelanggar.id_pelanggaran = tb_pelanggaran.id_pelanggaran
+                                    AND tb_datapelanggar.id_guru = tb_pengguna.id_pengguna");
                                     while ($pelanggaran = $x->fetch_assoc()){
                                     ?>
                                 <tr>
@@ -98,6 +100,7 @@
                                     <td><?php echo $pelanggaran['deskripsi_pelanggaran']?></td>
                                     <td><?php echo $pelanggaran['poin_pelanggaran']?></td>
                                     <td><?php echo $pelanggaran['tanggal_pelanggaran']?></td>
+                                    <td><?php echo $pelanggaran['nama_pengguna']?></td>
                                   </tr>
                                     <?php } ?>
                                 </tbody>
