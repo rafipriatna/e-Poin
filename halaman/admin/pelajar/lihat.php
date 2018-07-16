@@ -111,17 +111,44 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Data penghargaan</strong>
+                                <strong class="card-title">Data dispensasi</strong>
                             </div>
                             <div class="card-body card-block">
-                            Segera hadir!
+                            <table id="bootstrap-data-table2" class="table table-striped table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Deskripsi</th>
+                                    <th>Tanggal</th>
+                                    <th>Petugas</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $no   = 1;
+                                    $y  = $koneksi->query("SELECT * FROM tb_datadispen, tb_pengguna
+                                    WHERE tb_datadispen.id_pelajar = '$id_pelajar'
+                                    AND tb_datadispen.id_guru = tb_pengguna.id_pengguna");
+                                    while ($pelanggaran = $y->fetch_assoc()){
+                                    ?>
+                                <tr>
+                                    <td><?php echo $no++;?></td>
+                                    <td><?php echo $pelanggaran['nama_dispen']?></td>
+                                    <td><?php echo $pelanggaran['deskripsi_dispen']?></td>
+                                    <td><?php echo $pelanggaran['tgl_dibuat']?></td>
+                                    <td><?php echo $pelanggaran['nama_pengguna']?></td>
+                                  </tr>
+                                    <?php } ?>
+                                </tbody>
+                              </table>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Data dispensasi</strong>
+                                <strong class="card-title">Data penghargaan</strong>
                             </div>
                             <div class="card-body card-block">
                             Segera hadir!

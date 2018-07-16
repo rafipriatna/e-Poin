@@ -18,6 +18,8 @@
     <script>
         $(document).ready(function() {
           $('#bootstrap-data-table-export').DataTable();
+          $('#bootstrap-data-table2').DataTable();
+          $('#bootstrap-data-table3').DataTable();
         } );
     </script>
 
