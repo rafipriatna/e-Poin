@@ -27,7 +27,7 @@
             <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Data pelajar <small><a href="?halaman=pelajar&aksi=ubah&id=<?php echo $id_pelajar;?>"><span style="font-size:12px" class="badge badge-primary float-right mt-1">Ubah</span></a></small></strong>
+                                <strong class="card-title">Data pelajar</strong>
                             </div>
                             <div class="card-body card-block">
                                 <div class="col-lg-3">
@@ -62,6 +62,10 @@
                                         </div>
                                 </div>
                             </div>
+                            <div class="card-footer">
+                                <a class="btn btn-primary btn-sm" href="?halaman=pelajar&aksi=ubah&id=<?php echo $id_pelajar;?>"><i class="fa fa-cogs"></i> Ubah</a>
+                                <a onclick="return confirm ('Hapus data pelajar ini?')" class="btn btn-danger btn-sm" href="?halaman=pelajar&aksi=hapus&id=<?php echo $id_pelajar;?>"><i class="fa fa-remove"></i> Hapus</a>
+                            </div>
                         </div>
                     </div>                  
                     <div class="col-lg-12">
@@ -77,6 +81,7 @@
                                     <th>Nama</th>
                                     <th>Deskripsi</th>
                                     <th>Poin</th>
+                                    <th>Tanggal</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -92,6 +97,7 @@
                                     <td><?php echo $pelanggaran['nama_pelanggaran']?></td>
                                     <td><?php echo $pelanggaran['deskripsi_pelanggaran']?></td>
                                     <td><?php echo $pelanggaran['poin_pelanggaran']?></td>
+                                    <td><?php echo $pelanggaran['tanggal_pelanggaran']?></td>
                                   </tr>
                                     <?php } ?>
                                 </tbody>
