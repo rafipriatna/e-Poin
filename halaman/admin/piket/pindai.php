@@ -139,7 +139,7 @@
                                  <strong class="card-title">Dispensasi</strong>
                              </div>
                             <div class="card-body">
-                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                            <table id="bootstrap-data-table2" class="table table-striped table-bordered">
                                 <thead>
                                   <tr>
                                     <th>No</th>

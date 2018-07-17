@@ -10,8 +10,8 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li>Guru</li>
-                            <li class="active">Ubah guru</li>
+                            <li><a href="?halaman=guru">Guru</a></li>
+                            <li class="active">Tambah guru</li>
                         </ol>
                     </div>
                 </div>

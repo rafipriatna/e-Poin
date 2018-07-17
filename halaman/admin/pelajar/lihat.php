@@ -64,6 +64,7 @@
                             </div>
                             <div class="card-footer">
                                 <a class="btn btn-primary btn-sm" href="?halaman=pelajar&aksi=ubah&id=<?php echo $id_pelajar;?>"><i class="fa fa-cogs"></i> Ubah</a>
+                                <a href="?halaman=pelajar&aksi=gantikatasandi&id=<?php echo $id_pelajar;?>" class="btn btn-info btn-sm"><i class="fa fa-lock"></i> Ganti kata sandi</a>
                                 <a onclick="return confirm ('Hapus data pelajar ini?')" class="btn btn-danger btn-sm" href="?halaman=pelajar&aksi=hapus&id=<?php echo $id_pelajar;?>"><i class="fa fa-remove"></i> Hapus</a>
                             </div>
                         </div>

@@ -4,6 +4,8 @@ include ('konfigurasi/koneksi.php');
 $judul  = "e-Poin";
 if (!isset($_SESSION['id'])) {
     header("location: masuk.php");
+}elseif($_SESSION['level'] == 'Pelajar'){
+    header("location: pelajar/index.php");
 }else {
     
     if(isset($_SESSION['waktu']) && (time() - $_SESSION['waktu'] > $_SESSION['habis'] )) {
@@ -57,6 +59,9 @@ include ('tata_letak/atas.php');
                 }
                 if ($aksi == "tambah"){
                     include "halaman/admin/pelajar/tambah.php";
+                }
+                if ($aksi == "gantikatasandi"){
+                    include "halaman/admin/pelajar/gantipass.php";
                 }
             }
             if ($halaman == "pelanggaran"){
