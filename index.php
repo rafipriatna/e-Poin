@@ -46,6 +46,9 @@ include ('tata_letak/atas.php');
                 if ($aksi == "tambah"){
                     include "halaman/admin/guru/tambah.php";
                 }
+                if ($aksi == "hapus"){
+                    include "halaman/admin/guru/hapus.php";
+                }
             }
             if ($halaman == "pelajar"){
                 if ($aksi == ""){
@@ -59,6 +62,9 @@ include ('tata_letak/atas.php');
                 }
                 if ($aksi == "tambah"){
                     include "halaman/admin/pelajar/tambah.php";
+                }
+                if ($aksi == "hapus"){
+                    include "halaman/admin/pelajar/hapus.php";
                 }
                 if ($aksi == "gantikatasandi"){
                     include "halaman/admin/pelajar/gantipass.php";

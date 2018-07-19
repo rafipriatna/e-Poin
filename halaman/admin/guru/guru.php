@@ -53,7 +53,7 @@
                         <td>
                             <a href="?halaman=guru&aksi=ubah&id=<?php echo $pengguna['id_pengguna']?>"
                             class="btn btn-success"><i title="Ubah" class="fa fa-edit"></i> Ubah</a>
-                            <a onclick="return confirm ('Hapus pengguna ini?')" href="?halaman=pengguna&aksi=hapus&id=<?php echo $pengguna['id_pengguna']?>"
+                            <a onclick="return confirm ('Hapus pengguna ini?')" href="?halaman=guru&aksi=hapus&id=<?php echo $pengguna['id_pengguna']?>"
                             class="btn btn-danger"><i title="Hapus" class="fa fa-window-close"></i> Hapus</a>
                         </td>
                       </tr>
