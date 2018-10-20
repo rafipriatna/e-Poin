@@ -15,6 +15,7 @@
         <?php
     }
 ?>
+
 <div class="breadcrumbs">
     <div class="col-sm-4">
         <div class="page-header float-left">
@@ -224,11 +225,11 @@
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Dari jam</label>
-                        <input name="dari_kapan" type="time" class="form-control"/>
+                        <input name="dari_kapan" id="dispen-start" type="time" class="form-control" required />
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Sampai jam</label>
-                        <input name="sampai_kapan" type="time" class="form-control"/>
+                        <input name="sampai_kapan" id="dispen-end" type="time" class="form-control" required />
                     </div>
                 </form>
             </div>
