@@ -144,8 +144,10 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $izin['nama_dispen']; ?></td>
                                             <td><?php echo $izin['deskripsi_dispen']?></td>
-                                            <td><?php echo $izin['dari_kapan']?></td>
-                                            <td><?php echo $izin['sampai_kapan']?></td>
+                                            <td><?php echo date("H:i", strtotime($izin["dari_kapan"]))?> 
+                                            <?php echo date("Y-m-d", strtotime($izin["tgl_dibuat"]))?></td>
+                                            <td><?php echo date("H:i", strtotime($izin["sampai_kapan"]))?>
+                                            <?php echo date("Y-m-d", strtotime($izin["tgl_dibuat"]))?></td>
                                             <td><?php echo $izin['nama_pengguna']?></td>
                                         </tr>
                                         <?php
