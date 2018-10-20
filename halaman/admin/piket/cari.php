@@ -5,10 +5,11 @@
     $cek     = $sql->num_rows;
     $daftarNama = array();
     $response = "<ul style='list-style-type: none;'>";
-
+    $i = 1;
     if($cek >= 0){
         while($row = $sql->fetch_assoc()){
-            $response .= "<li>".$row['nama_pelajar']."</li>";
+            $response .= "<li><a href='javascript:Result{$i}()');' id=\"$i\">".$row['nama_pelajar']."</a></li>";
+	    $i++;
         }
     }
 
