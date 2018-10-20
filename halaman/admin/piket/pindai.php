@@ -106,7 +106,7 @@
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $pelanggaran['nama_pelanggaran']; ?></td>
-                                            <td><?php echo $pelanggaran['deskripsi_pelanggaran']?></td>
+                                            <td><?php echo $pelanggaran['keterangan_pelanggaran']?></td>
                                             <td><?php echo $pelanggaran['poin_pelanggaran']?></td>
                                             <td><?php echo $pelanggaran['tanggal_pelanggaran']?></td>
                                             <td><?php echo $pelanggaran['nama_pengguna']?></td>
@@ -183,6 +183,10 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <label class="form-control-label">Keterangan</label>
+                        <textarea class="form-control" rows="4" cols="50" name="keterangan"></textarea>
+                    </div>
+                    <div class="form-group">
                         <label class="form-control-label">Poin</label>
                         <p name="poin" id="previewPoin"></p>
                     </div>
@@ -236,6 +240,7 @@
 <?php
     if(isset($_POST['tambah-pelanggaran'])){
         $id_pelanggaran = $_POST['jenis-pelanggaran'];
+        $keterangan = $_POST['keterangan'];
         $id_guru        = $_SESSION['id'];
         $setting        = new DateTime('NOW', new DateTimeZone('Asia/Jakarta'));
         $tanggal        = $setting->format('Y-m-d H:i:s');
@@ -246,7 +251,7 @@
         $poin           = $data['poin_pelanggaran'];
         // Data dimasukan ke table data pelanggar.
         $koneksi->query("INSERT INTO tb_datapelanggar (id_pelajar, id_pelanggaran, poin_pelanggaran,
-        id_guru, tanggal_pelanggaran) VALUES ('$id', '$id_pelanggaran', '$poin', '$id_guru', '$tanggal')");
+        id_guru, tanggal_pelanggaran, keterangan_pelanggaran) VALUES ('$id', '$id_pelanggaran', '$poin', '$id_guru', '$tanggal', '$keterangan')");
         // Tambah poin di table pelajar.
         $koneksi->query("UPDATE tb_pelajar SET poin_pelajar=(poin_pelajar + $poin) WHERE id_pelajar='$id'");
         ?>
