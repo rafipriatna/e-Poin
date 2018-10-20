@@ -46,7 +46,9 @@
                 while ($pelajar = $sql->fetch_assoc()){
                 ?>
                     <tr>
-                        <td><img src="gambar/profil/pelajar/<?php echo $pelajar['foto_pelajar']?>"
+                        <td><img src="<?php
+                        if (file_exists('gambar/profil/pelajar/'.$pelajar['foto_pelajar'].'')) { echo 'gambar/profil/pelajar/'.$pelajar['foto_pelajar'].''; } else {echo 'http://placekitten.com/g/200/200';}
+                          ?>"
                         width="50" height="50"></td>
                         <td><?php echo $pelajar['nis_pelajar']?></td>
                         <td><?php echo $pelajar['nama_pelajar']?></td>
