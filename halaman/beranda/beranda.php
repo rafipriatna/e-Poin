@@ -52,52 +52,49 @@
                           </div>
                         </div>
                 </div>
-
-            </div>
-            <div class="content m-6">
-            <div class="row">
-              <div class="col-sm-12">
-                  <div class="card">
-                      <div class="card-header">
-                          <strong class="card-title">Pelanggaran terbaru</strong>
-                      </div>
-                      <div class="card-body card-block" style="overflow:auto;">
-                      <table id="bootstrap-data-table" class="table table-striped table-bordered">
-                          <thead>
-                            <tr>
-                              <th>No</th>
-                              <th>Pelanggar</th>
-                              <th>Pelanggaran</th>
-                              <th>Deskripsi</th>
-                              <th>Poin</th>
-                              <th>Tanggal</th>
-                              <th>Petugas</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                              <?php
-                              $no   = 1;
-                              $x  = $koneksi->query("SELECT * FROM tb_datapelanggar, tb_pelanggaran, tb_pengguna, tb_pelajar
-                              WHERE tb_datapelanggar.id_pelajar =  tb_pelajar.id_pelajar
-                              AND tb_datapelanggar.id_pelanggaran = tb_pelanggaran.id_pelanggaran
-                              AND tb_datapelanggar.id_guru = tb_pengguna.id_pengguna ORDER by tanggal_pelanggaran DESC LIMIT 20");
-                              while ($pelanggaran = $x->fetch_assoc()) {
-                              ?>
-                          <tr>
-                              <td><?php echo $no++;?></td>
-                              <td><?php echo $pelanggaran['nama_pelajar']?></td>
-                              <td><?php echo $pelanggaran['nama_pelanggaran']?></td>
-                              <td><?php echo $pelanggaran['deskripsi_pelanggaran']?></td>
-                              <td><?php echo $pelanggaran['poin_pelanggaran']?></td>
-                              <td><?php echo $pelanggaran['tanggal_pelanggaran']?></td>
-                              <td><?php echo $pelanggaran['nama_pengguna']?></td>
-                            </tr>
-                              <?php } ?>
-                          </tbody>
-                        </table>
+                <div class="row m-4">
+                  <div class="col-sm-12">
+                      <div class="card">
+                          <div class="card-header">
+                              <strong class="card-title">Pelanggaran terbaru</strong>
+                          </div>
+                          <div class="card-body card-block" style="overflow:auto;">
+                          <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>No</th>
+                                  <th>Pelanggar</th>
+                                  <th>Pelanggaran</th>
+                                  <th>Deskripsi</th>
+                                  <th>Poin</th>
+                                  <th>Tanggal</th>
+                                  <th>Petugas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  <?php
+                                  $no   = 1;
+                                  $x  = $koneksi->query("SELECT * FROM tb_datapelanggar, tb_pelanggaran, tb_pengguna, tb_pelajar
+                                  WHERE tb_datapelanggar.id_pelajar =  tb_pelajar.id_pelajar
+                                  AND tb_datapelanggar.id_pelanggaran = tb_pelanggaran.id_pelanggaran
+                                  AND tb_datapelanggar.id_guru = tb_pengguna.id_pengguna ORDER by tanggal_pelanggaran DESC LIMIT 20");
+                                  while ($pelanggaran = $x->fetch_assoc()) {
+                                  ?>
+                              <tr>
+                                  <td><?php echo $no++;?></td>
+                                  <td><?php echo $pelanggaran['nama_pelajar']?></td>
+                                  <td><?php echo $pelanggaran['nama_pelanggaran']?></td>
+                                  <td><?php echo $pelanggaran['deskripsi_pelanggaran']?></td>
+                                  <td><?php echo $pelanggaran['poin_pelanggaran']?></td>
+                                  <td><?php echo $pelanggaran['tanggal_pelanggaran']?></td>
+                                  <td><?php echo $pelanggaran['nama_pengguna']?></td>
+                                </tr>
+                                  <?php } ?>
+                              </tbody>
+                            </table>
+                          </div>
                       </div>
                   </div>
-              </div>
+                </div>
             </div>
-          </div>
   </div>
