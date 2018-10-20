@@ -6,23 +6,8 @@
 <script type="text/javascript" src="halaman/admin/piket/script.js"></script>
 <script>
 	function Result1() {
-	document.getElementById("namapelajar").value = $("#1").text();
-	$('#display').html('');
-	}
-	function Result2() {
- 	document.getElementById("namapelajar").value = $("#2").text();
-	$('#display').html('');
-	}
-	function Result3() {
- 	document.getElementById("namapelajar").value = $("#3").text();
-	$('#display').html('');
-	}
-	function Result4() {
-	document.getElementById("namapelajar").value = $("#4").text();
-	$('#display').html('');
-	}
-	function Result5() {
-	document.getElementById("namapelajar").value = $("#5").text();
+	var resultID = jQuery(this).attr("id");
+	document.getElementById("namapelajar").value = $(resultID).text();
 	$('#display').html('');
 	}
 </script>
@@ -71,4 +56,3 @@
         </div>
     </div>
 </div>
-
