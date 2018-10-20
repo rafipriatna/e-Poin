@@ -41,8 +41,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="gambar/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="gambar/logo2.png" alt="Logo"></a>
+                <a class="navbar-brand" href="#" data-toggle="modal" data-target="#authorModal"><img src="gambar/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="#" data-toggle="modal" data-target="#authorModal"><img src="gambar/logo2.png" alt="Logo"></a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -81,7 +81,7 @@
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
                     <div class="dropdown for-notification">
-                          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="modal" data-target="#rafiModal">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="modal" data-target="#authorModal">
                             <i class="fa fa-bell"></i>
                             <span class="count bg-danger">1</span>
                           </button>
@@ -91,11 +91,11 @@
                     </div>
 
                 <!-- Rafi Priatna -->
-                <div class="modal fade" id="rafiModal" tabindex="-1" role="dialog" aria-labelledby="rafiModalLabel" aria-hidden="true">
+                <div class="modal fade" id="authorModal" tabindex="-1" role="dialog" aria-labelledby="authorModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="rafiModalLabel">Tentang e-Poin</h5>
+                                <h5 class="modal-title" id="authorModalLabel">Tentang e-Poin</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
