@@ -82,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <strong class="card-title"> Riwayat Pelanggaran</strong>
@@ -120,7 +120,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <strong class="card-title">Riwayat Izin</strong>
@@ -144,7 +144,7 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $izin['nama_dispen']; ?></td>
                                             <td><?php echo $izin['deskripsi_dispen']?></td>
-                                            <td><?php echo date("H:i", strtotime($izin["dari_kapan"]))?> 
+                                            <td><?php echo date("H:i", strtotime($izin["dari_kapan"]))?>
                                             <?php echo date("Y-m-d", strtotime($izin["tgl_dibuat"]))?></td>
                                             <td><?php echo date("H:i", strtotime($izin["sampai_kapan"]))?>
                                             <?php echo date("Y-m-d", strtotime($izin["tgl_dibuat"]))?></td>
