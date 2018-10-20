@@ -129,7 +129,7 @@
                     <table id="tabel-izin" class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>No</th><th>Izin</th><th>Keterangan</th><th>Tanggal</th><th>Petugas</th>
+                                <th>No</th><th>Izin</th><th>Keterangan</th><th>Dari</th><th>Sampai</th><th>Petugas</th>
                             </tr>
                             <tbody>
                                 <?php
@@ -144,7 +144,8 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $izin['nama_dispen']; ?></td>
                                             <td><?php echo $izin['deskripsi_dispen']?></td>
-                                            <td><?php echo $izin['tgl_dibuat']?></td>
+                                            <td><?php echo $izin['dari_kapan']?></td>
+                                            <td><?php echo $izin['sampai_kapan']?></td>
                                             <td><?php echo $izin['nama_pengguna']?></td>
                                         </tr>
                                         <?php
