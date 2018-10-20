@@ -80,7 +80,7 @@
                               $x  = $koneksi->query("SELECT * FROM tb_datapelanggar, tb_pelanggaran, tb_pengguna, tb_pelajar
                               WHERE tb_datapelanggar.id_pelajar =  tb_pelajar.id_pelajar
                               AND tb_datapelanggar.id_pelanggaran = tb_pelanggaran.id_pelanggaran
-                              AND tb_pengguna.id_pengguna = tb_pengguna.id_pengguna ORDER by tanggal_pelanggaran DESC LIMIT 20");
+                              AND tb_datapelanggar.id_guru = tb_pengguna.id_pengguna ORDER by tanggal_pelanggaran DESC LIMIT 20");
                               while ($pelanggaran = $x->fetch_assoc()) {
                               ?>
                           <tr>
