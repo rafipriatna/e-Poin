@@ -95,7 +95,7 @@
                     <div class="modal-dialog modal-sm" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="rafiModalLabel">e-Poin</h5>
+                                <h5 class="modal-title" id="rafiModalLabel">Tentang e-Poin</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -103,7 +103,7 @@
                             <div class="modal-body">
                                 <p>
                                     Aplikasi <b>e-Poin</b> dikembangkan dengan <i style="color:#FF80AB" class="fa fa-heart"></i> oleh
-                                    <a href="https://www.rafipriatna.web.id" target="_blank">Rafi Priatna</a>.
+                                    <a href="https://www.rafipriatna.web.id" target="_blank">Rafi Priatna</a> dan tim <a href="https://ekskulconnect.com/" target="_blank">N3TS Connect</a>.
                                 </p>
                             </div>
                             <div class="modal-footer">
