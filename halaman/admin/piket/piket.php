@@ -11,6 +11,11 @@
 	$('#display').html('');
 	}
 </script>
+<style>
+#display:empty {
+	display:none;
+}
+</style>
 <div class="content mt-3">
     <div class="row">
         <div class="col-md-6">
@@ -45,7 +50,7 @@
                             <input name="nama_pelajar" id="namapelajar" class="form-control" placeholder="Cari nama" autocomplete="off">
                         </div>
                     </form>
-			        <div id="display" style="position: absolute; background-color: white; padding: 5px 10px 0px 15px; top: 160px; margin: auto;"></div>
+			        <div id="display" style="position: absolute; background-color: white; padding: 5px 10px 0px 15px; top: 160px; margin: auto; left: 30px; border: 1px solid #ced4da;"></div>
                 </div>
                 <div class="card-footer">
                     <button form="inputnama" name="namasiswa" type="submit" class="btn btn-primary btn-sm">
