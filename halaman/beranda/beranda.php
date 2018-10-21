@@ -65,7 +65,7 @@
                                   <th>No</th>
                                   <th>Pelanggar</th>
                                   <th>Pelanggaran</th>
-                                  <th>Deskripsi</th>
+                                  <th>Keterangan</th>
                                   <th>Poin</th>
                                   <th>Tanggal</th>
                                   <th>Petugas</th>
@@ -84,7 +84,7 @@
                                   <td><?php echo $no++;?></td>
                                   <td><?php echo $pelanggaran['nama_pelajar']?></td>
                                   <td><?php echo $pelanggaran['nama_pelanggaran']?></td>
-                                  <td><?php echo $pelanggaran['deskripsi_pelanggaran']?></td>
+                                  <td><?php echo $pelanggaran['keterangan_pelanggaran']?></td>
                                   <td><?php echo $pelanggaran['poin_pelanggaran']?></td>
                                   <td><?php echo $pelanggaran['tanggal_pelanggaran']?></td>
                                   <td><?php echo $pelanggaran['nama_pengguna']?></td>
