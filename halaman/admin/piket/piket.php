@@ -5,9 +5,9 @@
 
 <script type="text/javascript" src="halaman/admin/piket/script.js"></script>
 <script>
-	function Result1() {
-	var resultID = jQuery(this).attr("id");
-	document.getElementById("namapelajar").value = $(resultID).text();
+	function Result(element) {
+    var nama = element.textContent;
+	document.getElementById("namapelajar").value = $(nama).selector;
 	$('#display').html('');
 	}
 </script>
@@ -42,7 +42,7 @@
                     Cari siswa berdasarkan Nama<br /><br />
                     <form method="POST" action="index.php?halaman=piket&aksi=terimainput" class="col-sm-6">
                         <div class="form-group">
-                            <input name="nama_pelajar" id="namapelajar" class="form-control" placeholder="Cari nama" autocomplete="off" />
+                            <input name="nama_pelajar" id="namapelajar" class="form-control" placeholder="Cari nama" autocomplete="off">
                         </div>
 			<div id="display"></div>
                 </div>

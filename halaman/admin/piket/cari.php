@@ -8,7 +8,7 @@
     $i = 1;
     if($cek >= 0){
         while($row = $sql->fetch_assoc()){
-            $response .= "<li><a href='javascript:Result1()');' id=\"$i\">".$row['nama_pelajar']."</a></li>";
+            $response .= "<li><a href='#' onClick='Result(this)'>".$row['nama_pelajar']."</a></li>";
 	    $i++;
         }
     }
