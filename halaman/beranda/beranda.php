@@ -98,7 +98,7 @@
                 </div>
                 <div class="row m-4">
                   <div class="col-lg-12">
-                      <div class="card">
+                      <div class="card" style="overflow:auto;">
                           <div class="card-header">
                               <strong class="card-title">Dispensasi Terbaru</strong>
                           </div>
