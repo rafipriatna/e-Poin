@@ -20,17 +20,17 @@
                 </div>
                 <div class="card-body">
                     Silakan pindai kartu pelajar atau ketik manual NIS.<br /><br />
-                    <form method="POST" action="index.php?halaman=piket&aksi=terimainput" class="col-sm-3">
+                    <form id="inputnis" method="POST" action="index.php?halaman=piket&aksi=terimainput" class="col-sm-4">
                         <div class="form-group">
                             <input name="pindai" type="number" class="form-control" required autofocus />
                         </div>
+                    </form>
                 </div>
                 <div class="card-footer">
-                    <button value="mindai bre" name="simpan" type="submit" class="btn btn-primary btn-sm">
+                    <button form="inputnis" name="simpan" type="submit" class="btn btn-primary btn-sm">
                         <i class="fa fa-sign-in"></i> Pindai
                     </button>
                 </div>
-                </form>
             </div>
         </div>
         <div class="col-md-6">
@@ -40,18 +40,18 @@
                 </div>
                 <div class="card-body">
                     Cari siswa berdasarkan Nama<br /><br />
-                    <form method="POST" action="index.php?halaman=piket&aksi=terimainput" class="col-sm-6">
+                    <form id="inputnama" method="POST" action="index.php?halaman=piket&aksi=terimainput" class="col-sm-6">
                         <div class="form-group">
                             <input name="nama_pelajar" id="namapelajar" class="form-control" placeholder="Cari nama" autocomplete="off">
                         </div>
-			<div id="display"></div>
+                    </form>
+			        <div id="display"></div>
                 </div>
                 <div class="card-footer">
-                    <button value="mindai bre" name="namasiswa" type="submit" class="btn btn-primary btn-sm">
+                    <button form="inputnama" name="namasiswa" type="submit" class="btn btn-primary btn-sm">
                         <i class="fa fa-sign-in"></i> Pindai
                     </button>
                 </div>
-                </form>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 include ('konfigurasi/koneksi.php');
-if($_POST["simpan"] == "mindai bre"){
+if(isset($_POST["simpan"])){
     $pindai  = $_POST['pindai'];
     $sql     = $koneksi->query("SELECT * FROM tb_pelajar WHERE nis_pelajar = '$pindai'");
     $hasil   = $sql->fetch_assoc();
@@ -24,7 +24,7 @@ if($_POST["simpan"] == "mindai bre"){
 } 
 ?>
 <?php
-if($_POST["namasiswa"] == "mindai bre"){
+if(isset($_POST["namasiswa"])){
     $pindai  = $_POST['nama_pelajar'];
     $sql     = $koneksi->query("SELECT nis_pelajar FROM tb_pelajar WHERE nama_pelajar = UPPER('$pindai')");
     $hasil   = $sql->fetch_assoc();
