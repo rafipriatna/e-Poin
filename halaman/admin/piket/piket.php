@@ -45,7 +45,7 @@
                             <input name="nama_pelajar" id="namapelajar" class="form-control" placeholder="Cari nama" autocomplete="off">
                         </div>
                     </form>
-			        <div id="display"></div>
+			        <div id="display" style="position: absolute; background-color: white; padding: 5px 10px 0px 15px; top: 160px; margin: auto;"></div>
                 </div>
                 <div class="card-footer">
                     <button form="inputnama" name="namasiswa" type="submit" class="btn btn-primary btn-sm">
