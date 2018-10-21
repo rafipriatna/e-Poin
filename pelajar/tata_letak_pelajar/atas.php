@@ -11,18 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="gambar/logo_rafipriatnablog.png">
+    <link rel="shortcut icon" href="../../gambar/logo_rafipriatnablog.png">
 
-    <link rel="stylesheet" href="web/css/normalize.css">
-    <link rel="stylesheet" href="web/css/bootstrap.min.css">
-    <link rel="stylesheet" href="web/css/font-awesome.min.css">
-    <link rel="stylesheet" href="web/css/themify-icons.css">
-    <link rel="stylesheet" href="web/css/flag-icon.min.css">
-    <link rel="stylesheet" href="web/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="../../web/css/normalize.css">
+    <link rel="stylesheet" href="../../web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/themify-icons.css">
+    <link rel="stylesheet" href="../../web/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../web/css/cs-skin-elastic.css">
     <!-- <link rel="stylesheet" href="web/css/bootstrap-select.less"> -->
-    <link rel="stylesheet" href="web/scss/style.css">
-    <link href="web/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="web/css/lib/datatable/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/scss/style.css">
+    <link href="../../web/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../web/css/lib/datatable/dataTables.bootstrap.min.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -41,8 +41,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#" data-toggle="modal" data-target="#authorModal"><img src="gambar/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="#" data-toggle="modal" data-target="#authorModal"><img src="gambar/logo2.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./"><img src="gambar/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="gambar/logo2.png" alt="Logo"></a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -81,7 +81,7 @@
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
                     <div class="dropdown for-notification">
-                          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="modal" data-target="#authorModal">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="modal" data-target="#rafiModal">
                             <i class="fa fa-bell"></i>
                             <span class="count bg-danger">1</span>
                           </button>
@@ -91,11 +91,11 @@
                     </div>
 
                 <!-- Rafi Priatna -->
-                <div class="modal fade" id="authorModal" tabindex="-1" role="dialog" aria-labelledby="authorModalLabel" aria-hidden="true">
+                <div class="modal fade" id="rafiModal" tabindex="-1" role="dialog" aria-labelledby="rafiModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="authorModalLabel">Tentang e-Poin</h5>
+                                <h5 class="modal-title" id="rafiModalLabel">e-Poin</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -103,7 +103,7 @@
                             <div class="modal-body">
                                 <p>
                                     Aplikasi <b>e-Poin</b> dikembangkan dengan <i style="color:#FF80AB" class="fa fa-heart"></i> oleh
-                                    <a href="https://www.rafipriatna.web.id" target="_blank">Rafi Priatna</a> dan tim <a href="https://ekskulconnect.com/" target="_blank">N3TS Connect</a>.
+                                    <a href="https://www.rafipriatna.web.id" target="_blank">Rafi Priatna</a>.
                                 </p>
                             </div>
                             <div class="modal-footer">
@@ -116,9 +116,7 @@
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" style="width:35px; height:35px;" src="<?php
-                            if (file_exists('gambar/profil/guru/'.$data['foto_pengguna'].'')) { echo 'gambar/profil/guru/'.$data['foto_pengguna'].''; } else {echo 'http://placekitten.com/g/200/200';}
-                              ?>" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" style="width:35px; height:35px;" src="gambar/profil/guru/<?php echo $data['foto_pengguna']?>" alt="User Avatar">
                         </a>
 
                         <div class="user-menu dropdown-menu">

@@ -31,7 +31,9 @@
                             </div>
                             <div class="card-body card-block">
                                 <div class="col-lg-3">
-                                <img style="width:150px; height:150px;" src="gambar/profil/pelajar/<?php echo $pelajar['foto_pelajar'];?>"/>
+                                <img style="width:150px; height:150px;" src="<?php
+                                if (file_exists('gambar/profil/pelajar/'.$pelajar['foto_pelajar'].'')) { echo 'gambar/profil/pelajar/'.$pelajar['foto_pelajar'].''; } else {echo 'http://placekitten.com/g/200/200';}
+                                  ?>"/>
                                 </div>
                                 <div class="col-lg-3">
                                         <div class="form-group">
@@ -68,7 +70,7 @@
                                 <a onclick="return confirm ('Hapus data pelajar ini?')" class="btn btn-danger btn-sm" href="?halaman=pelajar&aksi=hapus&id=<?php echo $id_pelajar;?>"><i class="fa fa-remove"></i> Hapus</a>
                             </div>
                         </div>
-                    </div>                  
+                    </div>
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
